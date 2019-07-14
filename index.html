@@ -30,21 +30,24 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">commercial Aircraft Crash</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">The Airliner Aircraft Crash</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Intro">Intro</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Aircraft">commercial Aircraft Crash</a>
+            <a class="nav-link js-scroll-trigger" href="#Aircraft">Map</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#Maping_Diary">Maping Diary</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Web_Diary">Web Diary</a>
+            <a class="nav-link js-scroll-trigger" href="#Download">Download</a>
           </li>
         </ul>
       </div>
@@ -55,12 +58,32 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-heading text-uppercase">commercial Aircraft Crash</div>
-		<div class="intro-time">(1969-2019)</div>
+        <div class="intro-heading text-uppercase">Airliner Aircraft Crash</div>
+		<div class="intro-time">(1969-2018)</div>
       </div>
     </div>
   </header>
-
+  
+ <!-- Web Diary -->
+  <section class="bg-light" id="Intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Introduction</h2>
+          <h3 class="section-subheading text-muted">About the Airliner Aircraft Crash Map</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto ">
+          <p class="large text-muted">The Airliner Aircraft Crash Map was made during the term in TUW for Map Creation Course. It aims to present
+		  Airliner Aircraft Crash events happened from 1969 to 2018 and their flight route information with more details in one map.Audiences can get the more detailed information like the position of crash site, finished flight route and unfinished flight route according 
+		  to the different symbols on the map. Data used for the map are 1) Topographical World Map from <a href="https://www.naturalearthdata.com/downloads/10m-cross-blend-hypso/cross-blended-hypso/">Natural Earth</a>
+		  2)Aircraft crash data from<a href="https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft">Wikipedia</a>.</p>
+		</div>
+      </div>
+    </div>
+  </section>
+  
   <!-- Aircraft -->
   <section id="Aircraft">
     <div class="container">
@@ -71,7 +94,7 @@
 		<h1>Flight Trajectory</h1>
 		</div>
 		<div class="layer">
-		<h1>Tiled Map</h1>
+		<h1>Final Map</h1>
 		</div>
     </div>
   </section>
@@ -81,7 +104,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Maping Diary</h2>
+          <h2 class="section-heading text-uppercase">Mapping Procedure</h2>
           <h3 class="section-subheading text-muted">Record the process on making the map</h3>
         </div>
       </div>
@@ -98,7 +121,10 @@
                   <h4 class="subheading">Data Preparation</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted"></p>
+                  <p class="text-muted">
+					1) Searched topographical World Map for the base map 2) Used python code to 
+					crawl the crash data from webiste and geocode the location info.
+				  </p>
                 </div>
               </div>
             </li>
@@ -109,10 +135,13 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>Step 2</h4>
-                  <h4 class="subheading">Data Integration</h4>
+                  <h4 class="subheading">Projection</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted"></p>
+                  <p class="text-muted">
+				    1) Reprojected the crash data whose coordinates are based on Google Map
+					2) Selected the suitable project (Eckert IV) for the Map
+				  </p>
                 </div>
               </div>
             </li>
@@ -123,10 +152,13 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>Step 3</h4>
-                  <h4 class="subheading">Aircraft Trajectory Calculation</h4>
+                  <h4 class="subheading">Creating Aircraft Trajectory</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted"></p>
+                  <p class="text-muted">
+				  Devloped Arc Script Tool for Creating Aircraft Trajectory based on their start position, crash site
+				  and destination coordinates.
+				  </p>
                 </div>
               </div>
             </li>
@@ -137,16 +169,29 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>Step 4</h4>
-                  <h4 class="subheading">Map Design</h4>
+                  <h4 class="subheading">Statistic</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted"></p>
+                  <p class="text-muted">
+					Analyzed the Airliner Aircraft Crash situation in each year.
+				  </p>
                 </div>
               </div>
             </li>
             <li>
               <div class="timeline-image">
-                
+                <img class="rounded-circle img-fluid" src="img/Maping_Diary/5.png" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>Step 5</h4>
+                  <h4 class="subheading">Map Design</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+					Designed suitable symbols for different information and layout for the final map.
+				  </p>
+                </div>
               </div>
             </li>
           </ul>
@@ -154,26 +199,29 @@
       </div>
     </div>
   </section>
-
   <!-- Web Diary -->
-  <section class="bg-light" id="Web_Diary">
+  <section class="bg-light" id="Download">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Web Diary</h2>
-          <h3 class="section-subheading text-muted">Record the process on making the website</h3>
+          <h2 class="section-heading text-uppercase">Download</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-8 mx-auto ">
-          <p class="large text-muted">This webiste as the individual web_mapping assignment aims to show my Map Creation project: commercial Aircraft Crash Map in this term by 
-		  presenting used data, map creation process and map layers.<br>The website structure referenced the template <a href="https://startbootstrap.com/themes/agency/">Start Bootstrap - Agency</a>
-		  and the idea of the second page (Commercial Aircraft Crash) was inspired by <a href="https://www.nationalgeographic.com/magazine/2018/03/bird-migration-interactive-maps/">National Gepgraphy bird immigration page</a></p>
+			<ul class="large text-muted" style = {list-style-type:circle;}>
+			  <li><a href ="src/Map.pdf" >Map</a></li>
+			  <br>
+			  <li><a href ="src/Booklet.pdf">Booklet for important crash events</a></li>
+			  <br>
+			  <li><a href ="src/aircraft_info.csv" >Data</a></li>
+			  <br>
+			  <li><a href = >ArcTool(haven't been published)</a></li>
+			</ul>
         </div>
       </div>
     </div>
   </section>
- 
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -186,10 +234,10 @@
         <div class="col-md-4">
           <ul class="list-inline quicklinks">
             <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
+              <a href="#"></a>
             </li>
             <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
+              <a href="#"></a>
             </li>
           </ul>
         </div>
